@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchWithCQRSPattern.WebApi", "CleanArchWithCQRSPattern.WebApi\CleanArchWithCQRSPattern.WebApi.csproj", "{0B0D453D-4CB0-4A5A-9ED6-E3B307322706}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchWithCQRSPattern.Domain", "CleanArchWithCQRSPattern.Domain\CleanArchWithCQRSPattern.Domain.csproj", "{141D83F9-6D6E-4F46-9C70-96A8E1FE1323}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B0D453D-4CB0-4A5A-9ED6-E3B307322706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B0D453D-4CB0-4A5A-9ED6-E3B307322706}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B0D453D-4CB0-4A5A-9ED6-E3B307322706}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B0D453D-4CB0-4A5A-9ED6-E3B307322706}.Release|Any CPU.Build.0 = Release|Any CPU
+		{141D83F9-6D6E-4F46-9C70-96A8E1FE1323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{141D83F9-6D6E-4F46-9C70-96A8E1FE1323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{141D83F9-6D6E-4F46-9C70-96A8E1FE1323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{141D83F9-6D6E-4F46-9C70-96A8E1FE1323}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
