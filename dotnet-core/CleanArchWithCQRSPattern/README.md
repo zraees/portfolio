@@ -11,3 +11,4 @@ WebApi: <br/>
 dotnet new sln --name=CleanArchWithCQRSPattern to add empty solution<br/>
 dotnet new webapi --name=CleanArchWithCQRSPattern.WebApi to add new webapi project<br/>
 dotnet sln add ./CleanArchWithCQRSPattern.WebApi/CleanArchWithCQRSPattern.WebApi.csproj to add webApi project to solution<br/>
+dotnet add app/app.csproj reference lib/lib.csproj to add project reference<br/>
