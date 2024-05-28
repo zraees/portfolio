@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchWithCQRSPattern.We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchWithCQRSPattern.Domain", "CleanArchWithCQRSPattern.Domain\CleanArchWithCQRSPattern.Domain.csproj", "{141D83F9-6D6E-4F46-9C70-96A8E1FE1323}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchWithCQRSPattern.Infrastructure", "CleanArchWithCQRSPattern.Infrastructure\CleanArchWithCQRSPattern.Infrastructure.csproj", "{F959F5F8-5913-48D6-98D7-D322EF2B0C8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchWithCQRSPattern.Application", "CleanArchWithCQRSPattern.Application\CleanArchWithCQRSPattern.Application.csproj", "{0612FDA3-A9C8-4E0A-8100-A6D1F8BEAAB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{141D83F9-6D6E-4F46-9C70-96A8E1FE1323}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{141D83F9-6D6E-4F46-9C70-96A8E1FE1323}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{141D83F9-6D6E-4F46-9C70-96A8E1FE1323}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F959F5F8-5913-48D6-98D7-D322EF2B0C8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F959F5F8-5913-48D6-98D7-D322EF2B0C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F959F5F8-5913-48D6-98D7-D322EF2B0C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F959F5F8-5913-48D6-98D7-D322EF2B0C8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0612FDA3-A9C8-4E0A-8100-A6D1F8BEAAB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0612FDA3-A9C8-4E0A-8100-A6D1F8BEAAB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0612FDA3-A9C8-4E0A-8100-A6D1F8BEAAB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0612FDA3-A9C8-4E0A-8100-A6D1F8BEAAB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
