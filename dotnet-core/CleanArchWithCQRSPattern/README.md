@@ -1,5 +1,7 @@
 # Clean Architecture with CQRS Pattern
-This project is created to 
+The Onion Diagram of Clean Architecture<br/>
+    <img src="https://github.com/zraees/portfolio/assets/27266323/caffdf70-e442-4058-9c23-c28f041f5b19"
+        width="250" alt="Clean Architecture">
 
 ## Clean Architecture Project Structure
 Domain: <br/>
