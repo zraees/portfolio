@@ -6,9 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchWithCQRSPattern.Application\CleanArchWithCQRSPattern.Application.csproj" />
+    <ProjectReference Include="..\CleanArchWithCQRSPattern.Infrastructure\CleanArchWithCQRSPattern.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
