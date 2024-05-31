@@ -1,4 +1,6 @@
-public class BlogsVm
+using CleanArchWithCQRSPattern.Domain.Entities;
+
+public class BlogsVm : IMapFrom<Blog>
 {
     public Guid Id { get; set; }
 
