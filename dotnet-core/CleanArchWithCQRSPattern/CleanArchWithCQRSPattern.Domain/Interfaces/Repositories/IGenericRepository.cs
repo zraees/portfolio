@@ -8,10 +8,10 @@ public interface IGenericRepository<T> where T : BaseEntity
     Task<T> GetByIdAsync(Guid id);
 
     Task CreateAsync(T entity);
-    Task<int> DeleteAsync(Guid id);
-    Task<int> UpdateAsync(Guid id, T entity);
+    Task<Guid> DeleteAsync(Guid id);
+    Task<Guid> UpdateAsync(Guid id, T entity);
 
     void Create(T entity);
-    int Update(Guid id, T entity);
-    int Delete(Guid id);
+    Guid Update(Guid id, T entity);
+    Guid Delete(Guid id);
 }
