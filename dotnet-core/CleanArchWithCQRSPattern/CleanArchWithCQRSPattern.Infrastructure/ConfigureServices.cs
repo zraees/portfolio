@@ -14,7 +14,8 @@ public static class ConfigureServices
             opt.UseSqlite(configuration.GetConnectionString("BlogDbContext") ?? throw new InvalidOperationException("Connectionstring 'BlogDbContext' not found!"));
         });
 
-//services.AddTransient<IBlogRepository,BlogRepository>();
+        services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+        services.AddScoped<IBlogRepository, BlogRepository>();
         return services;
     }
 }
