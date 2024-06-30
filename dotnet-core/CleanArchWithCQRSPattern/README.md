@@ -21,3 +21,14 @@ dotnet new sln --name=CleanArchWithCQRSPattern to add empty solution<br/>
 dotnet new webapi --name=CleanArchWithCQRSPattern.WebApi to add new webapi project<br/>
 dotnet sln add ./CleanArchWithCQRSPattern.WebApi/CleanArchWithCQRSPattern.WebApi.csproj to add webApi project to solution<br/>
 dotnet add app/app.csproj reference lib/lib.csproj to add project reference<br/>
+
+following command to install 'dotnet ef' globally
+dotnet tool install --global dotnet-ef
+
+navigate to Infra-proj then to create migration file use following command  
+dotnet ef migrations add InitializeDB --project ../CleanArchWithCQRSPattern.Infrastructure --startup-project ../CleanArchWithCQRSPattern.WebApi
+
+navigate to Infra-proj then to create migration file use following command 
+otnet ef database update --project ../CleanArchWithCQRSPattern.Infrastructure --startup-project ../CleanArchWithCQRSPattern.WebApi
+
+DB SQLite ; just needs to define connectionString = Data Source = DBName.db, after update-database dabase created on root on webApiproj
