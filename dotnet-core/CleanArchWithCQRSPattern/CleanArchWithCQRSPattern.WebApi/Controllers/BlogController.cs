@@ -15,9 +15,24 @@ namespace CleanArchWithCQRSPattern.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllBlogs(){
-            var blogs =await _sender.Send(new GetBlogsQuery()).ConfigureAwait(false);
+        public async Task<IActionResult> GetAllBlogs()
+        {
+            var blogs = await _sender.Send(new GetBlogsQuery()).ConfigureAwait(false);
             return Ok(blogs);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetByIdAsync(Guid id)
+        {
+            var blog = await _sender.Send(new GetBlogByIdQuery(id)).ConfigureAwait(false);
+            if (blog == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(blog);
+            }
         }
     }
 }
