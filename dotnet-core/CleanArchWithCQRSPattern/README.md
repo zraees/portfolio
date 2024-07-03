@@ -15,6 +15,8 @@ The Onion Diagram of Clean Architecture<br/>
 * **MediatR**: Used for implementing the Mediator pattern, which helps decouple the different layers and components of the application.<br/>
 * **Serilog**: Used for logging and monitoring the application's behavior, including errors and important events.<br/>
 
+added fluentValidation in application layer; this is to validate Input in API layer, and validate CQRS commands.
+
 ## Some Commands to quick recall
 ### Sample .NET CLI commands to setup solution 
 dotnet new sln --name=CleanArchWithCQRSPattern to add empty solution<br/>
@@ -32,3 +34,4 @@ navigate to Infra-proj then to create migration file use following command
 otnet ef database update --project ../CleanArchWithCQRSPattern.Infrastructure --startup-project ../CleanArchWithCQRSPattern.WebApi
 
 DB SQLite ; just needs to define connectionString = Data Source = DBName.db, after update-database dabase created on root on webApiproj
+SQLite Studio: tool to manage SQLite database.
