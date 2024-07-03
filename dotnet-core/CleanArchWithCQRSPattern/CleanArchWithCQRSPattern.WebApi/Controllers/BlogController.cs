@@ -22,7 +22,7 @@ namespace CleanArchWithCQRSPattern.WebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetByIdAsync(Guid id)
+        public async Task<IActionResult> GetById(Guid id)
         {
             var blog = await _sender.Send(new GetBlogByIdQuery(id)).ConfigureAwait(false);
             if (blog == null)
@@ -33,6 +33,32 @@ namespace CleanArchWithCQRSPattern.WebApi.Controllers
             {
                 return Ok(blog);
             }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Add(CreateBlogCommand createBlogCommand)
+        {
+            var createdBlog= await _sender.Send(createBlogCommand).ConfigureAwait(false);
+            return CreatedAtAction(nameof(GetById), new { id = createdBlog.Id }, createdBlog);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(Guid id, UpdateBlogCommand updateBlogCommand)
+        {
+            if (id != updateBlogCommand.id)
+            {
+                return BadRequest();
+            }
+
+            await _sender.Send(updateBlogCommand).ConfigureAwait(false);
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            await _sender.Send(new DeleteBlogCommand(id)).ConfigureAwait(false);
+            return NoContent();
         }
     }
 }
