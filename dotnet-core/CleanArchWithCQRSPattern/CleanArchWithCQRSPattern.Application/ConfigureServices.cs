@@ -16,6 +16,7 @@ public static class ConfigureServices
             // adding valiation pipeline
             ctg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
         });
+
         return services;
     }
 }

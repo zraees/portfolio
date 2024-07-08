@@ -24,6 +24,6 @@ public class UserIdentityDbContext : IdentityDbContext
 
         builder.Entity<ApplicationUser>().Property(x => x.FriendlyName).HasMaxLength(250);
 
-        builder.HasDefaultSchema("identity");
+        // not supported with SqLite-DB builder.HasDefaultSchema("identity");
     }
 }
