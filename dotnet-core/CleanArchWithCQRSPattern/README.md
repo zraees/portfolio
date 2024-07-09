@@ -9,6 +9,8 @@ The Onion Diagram of Clean Architecture<br/>
 3. **Infrastructure**: This layer contains the implementation details, such as data access, external API integrations, and other infrastructure-related code. It should be dependent on the Application layer, but not the other way around.<br/>
 4. **WebApi**: This layer is the entry point for the application, handling HTTP requests and responses. It should be dependent on the Application layer, but not the other way around.<br/>
 
+Use .editorconfig to implement code standards.
+
 ### Some common 3rd party packages used to achieve best practices
 * **AutoMapper**: Used for mapping between domain entities and view models/DTOs.<br/>
 * **FluentValidation**: Used for implementing robust validation rules for the application's inputs.<br/>

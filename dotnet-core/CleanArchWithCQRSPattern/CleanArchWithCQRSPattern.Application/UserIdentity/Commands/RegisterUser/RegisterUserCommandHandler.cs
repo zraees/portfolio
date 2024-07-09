@@ -22,6 +22,12 @@ public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, A
 
     public async Task<ApplicationUser> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
     {
+        //validate email already exists.
+        if ((_userManager.FindByEmailAsync(request.appUser?.Email ?? "").Result?.Email ?? "").Length > 0)
+        {
+            throw new InvalidDataException("Email already exists.");
+        }
+
         await _userManager.CreateAsync(request.appUser, request.password).ConfigureAwait(false);
         return request.appUser;
     }
