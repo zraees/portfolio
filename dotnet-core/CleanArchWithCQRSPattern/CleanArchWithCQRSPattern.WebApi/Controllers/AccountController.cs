@@ -1,6 +1,8 @@
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
+using System.Security.Cryptography.Xml;
+using CleanArchWithCQRSPattern.Application.UserIdentity.Commands.GenerateAuthToken;
 using CleanArchWithCQRSPattern.Application.UserIdentity.Commands.LoginUser;
 using CleanArchWithCQRSPattern.Application.UserIdentity.Commands.RegisterUser;
 using CleanArchWithCQRSPattern.Domain.Entities.Identity;
@@ -39,7 +41,13 @@ public class AccountController : BaseApiController
     public async Task<IActionResult> Login(LoginUserCommand loginUserCommand)
     {
         var AppUser = await _sender.Send(loginUserCommand).ConfigureAwait(false);
+        var Token = await _sender.Send(new GenerateAuthTokenCommand(AppUser)).ConfigureAwait(false);
 
-        return Ok(AppUser);
+        return Ok(new UserDTO(AppUser.Email, AppUser.FriendlyName, Token));
     }
+
+    // list user
+
+    // refresh token
+
 }

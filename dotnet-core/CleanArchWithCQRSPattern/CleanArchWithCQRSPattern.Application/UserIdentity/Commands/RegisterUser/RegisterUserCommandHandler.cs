@@ -28,7 +28,19 @@ public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, A
             throw new InvalidDataException("Email already exists.");
         }
 
-        await _userManager.CreateAsync(request.appUser, request.password).ConfigureAwait(false);
+        //validate duplicate user name
+        if ((_userManager.FindByNameAsync(request.appUser?.UserName ?? "").Result?.UserName ?? "").Length > 0)
+        {
+            throw new InvalidDataException("User name already exists.");
+        }
+
+        var result = await _userManager.CreateAsync(request.appUser, request.password).ConfigureAwait(false);
+
+        if (result.Succeeded == false)
+        {
+            throw new InvalidDataException(result.Errors.ToString());
+        }
+
         return request.appUser;
     }
 }

@@ -7,10 +7,12 @@ namespace CleanArchWithCQRSPattern.Application.UserIdentity.Commands.LoginUser;
 public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, ApplicationUser>
 {
     private readonly UserManager<ApplicationUser> _userManager;
+    private readonly SignInManager<ApplicationUser> _signInManager;
 
-    public LoginUserCommandHandler(UserManager<ApplicationUser> userManager)
+    public LoginUserCommandHandler(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
     {
         _userManager = userManager;
+        _signInManager = signInManager;
     }
 
     public async Task<ApplicationUser> Handle(LoginUserCommand request, CancellationToken cancellationToken)
@@ -21,9 +23,9 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, Applica
             throw new KeyNotFoundException("Email address does not exist.");
         }
 
-        var isLoginSuccess = await _userManager.CheckPasswordAsync(appUser, request.password).ConfigureAwait(false);
+        var result = await _signInManager.CheckPasswordSignInAsync(appUser, request.password, false).ConfigureAwait(false);
 
-        if (isLoginSuccess == false)
+        if (result.Succeeded == false)
         {
             throw new KeyNotFoundException("Password not matched");
         }
