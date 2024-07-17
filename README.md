@@ -20,27 +20,7 @@ The key features of this project include:
 
 This project showcases the benefits of using the Clean Architecture and CQRS patterns, such as improved testability, scalability, and flexibility in the codebase.
 
-## Project 2: ASP.NET Identity Implementation
-
-**Technologies Used:**
-- ASP.NET Core Web API 8.0
-- ASP.NET Identity
-- JSON Web Tokens (JWT)
-- Entity Framework Core
-- SQLite
-
-This project demonstrates the implementation of user authentication and authorization using the ASP.NET Identity framework. It includes features such as user registration, login, and role-based access control.
-
-The key features of this project include:
-
-- Integration with ASP.NET Identity for user management
-- Use of JSON Web Tokens (JWT) for secure authentication
-- Entity Framework Core for data access
-- SQLite as the underlying database
-
-This project showcases the integration of ASP.NET Identity with a Web API application, providing a secure and scalable authentication and authorization mechanism.
-
-## Project 3: Onion Architecture Implementation
+## Project 2: Onion Architecture Implementation
 
 **Technologies Used:**
 - ASP.NET Core Web API 8.0
@@ -59,7 +39,7 @@ The key features of this project include:
 
 This project showcases the benefits of the Onion Architecture pattern, such as improved testability, flexibility, and scalability of the application.
 
-## Project 4: Angular 15 Front-end with Clean Architecture Backend
+## Project 3: Angular 15 Front-end with Clean Architecture Backend
 
 **Technologies Used:**
 - Angular 15
@@ -79,3 +59,23 @@ The key features of this project include:
 - Integration with the Clean Architecture Web API backend
 
 This project showcases the integration of a modern front-end framework (Angular 15) with a well-structured backend, following the principles of Clean Architecture and CQRS.
+
+## Project 4: ASP.NET Identity Implementation
+
+**Technologies Used:**
+- ASP.NET Core Web API 8.0
+- ASP.NET Identity
+- JSON Web Tokens (JWT)
+- Entity Framework Core
+- SQLite
+
+This project demonstrates the implementation of user authentication and authorization using the ASP.NET Identity framework. It includes features such as user registration, login, and role-based access control.
+
+The key features of this project include:
+
+- Integration with ASP.NET Identity for user management
+- Use of JSON Web Tokens (JWT) for secure authentication
+- Entity Framework Core for data access
+- SQLite as the underlying database
+
+This project showcases the integration of ASP.NET Identity with a Web API application, providing a secure and scalable authentication and authorization mechanism.
