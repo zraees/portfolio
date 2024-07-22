@@ -1,3 +1,5 @@
+using CleanArchWithCQRSPattern.Application.Common.Exceptions.Errors;
+using FluentResults;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,29 +19,35 @@ namespace CleanArchWithCQRSPattern.WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllBlogs()
         {
-            var blogs = await _sender.Send(new GetBlogsQuery()).ConfigureAwait(false);
-            return Ok(blogs);
+            var result = await _sender.Send(new GetBlogsQuery()).ConfigureAwait(false);
+
+            return Ok(result.Value);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(Guid id)
         {
-            var blog = await _sender.Send(new GetBlogByIdQuery(id)).ConfigureAwait(false);
-            if (blog == null)
+            var result = await _sender.Send(new GetBlogByIdQuery(id)).ConfigureAwait(false);
+
+            if (result.IsFailed)
             {
-                return NotFound();
+                return ResultFailerHandler(result);
             }
-            else
-            {
-                return Ok(blog);
-            }
+
+            return Ok(result.Value);
         }
 
         [HttpPost]
         public async Task<IActionResult> Add(CreateBlogCommand createBlogCommand)
         {
-            var createdBlog= await _sender.Send(createBlogCommand).ConfigureAwait(false);
-            return CreatedAtAction(nameof(GetById), new { id = createdBlog.Id }, createdBlog);
+            var result = await _sender.Send(createBlogCommand).ConfigureAwait(false);
+
+            if (result.IsFailed)
+            {
+                return ResultFailerHandler(result);
+            }
+
+            return CreatedAtAction(nameof(GetById), new { id = result.Value.Id }, result.Value);
         }
 
         [HttpPut("{id}")]
@@ -51,6 +59,7 @@ namespace CleanArchWithCQRSPattern.WebApi.Controllers
             }
 
             await _sender.Send(updateBlogCommand).ConfigureAwait(false);
+
             return NoContent();
         }
 
@@ -58,6 +67,7 @@ namespace CleanArchWithCQRSPattern.WebApi.Controllers
         public async Task<IActionResult> Delete(Guid id)
         {
             await _sender.Send(new DeleteBlogCommand(id)).ConfigureAwait(false);
+
             return NoContent();
         }
     }

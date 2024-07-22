@@ -16,7 +16,8 @@ Use .editorconfig to implement code standards.
 * **FluentValidation**: Used for implementing robust validation rules for the application's inputs.<br/>
 * **MediatR**: Used for implementing the Mediator pattern, which helps decouple the different layers and components of the application.<br/>
 * **Serilog**: Used for logging and monitoring the application's behavior, including errors and important events.<br/>
-
+* **FluentResults: used to implement Result pattern
+ 
 added fluentValidation in application layer; this is to validate Input in API layer, and validate CQRS commands.
 
 ## Some Commands to quick recall

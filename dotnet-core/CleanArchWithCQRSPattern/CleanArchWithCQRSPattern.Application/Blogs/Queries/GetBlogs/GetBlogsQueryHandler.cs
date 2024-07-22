@@ -1,8 +1,9 @@
 using MediatR;
 using CleanArchWithCQRSPattern.Domain.Interfaces.Repositories;
 using AutoMapper;
+using FluentResults;
 
-public class GetBlogsQueryHandler : IRequestHandler<GetBlogsQuery, IEnumerable<BlogsVm>>
+public class GetBlogsQueryHandler : IRequestHandler<GetBlogsQuery, Result<IEnumerable<BlogsVm>>>
 {
     private readonly IBlogRepository _blogRepository;
     private readonly IMapper _mapper;
@@ -20,7 +21,7 @@ public class GetBlogsQueryHandler : IRequestHandler<GetBlogsQuery, IEnumerable<B
     /// <param name="request"></param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
-    public async Task<IEnumerable<BlogsVm>> Handle(GetBlogsQuery request, CancellationToken cancellationToken)
+    public async Task<Result<IEnumerable<BlogsVm>>> Handle(GetBlogsQuery request, CancellationToken cancellationToken)
     {
         //ConfigureAwait(false) is a way to optimize the performance of asynchronous code 
         //by telling the program not to worry about the specific "context" it was running in before 
@@ -33,6 +34,7 @@ public class GetBlogsQueryHandler : IRequestHandler<GetBlogsQuery, IEnumerable<B
 
         // mapping entity to VM using AutoMapper
         var blogList = _mapper.Map<IEnumerable<BlogsVm>>(blogs);
-        return blogList;
+
+        return Result.Ok(blogList);
     }
 }
