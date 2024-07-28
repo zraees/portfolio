@@ -33,12 +33,12 @@ public class GenerateAuthTokenCommandHandler : IRequestHandler<GenerateAuthToken
         var TokenDesc = new SecurityTokenDescriptor
         {
             Subject = new ClaimsIdentity(claims),
-            Audience = request.applicationUser.FriendlyName,
+            Audience = _configuration["Token:Audience"],//request.applicationUser.FriendlyName,
             Expires = DateTime.Now.AddDays(7),
             SigningCredentials = cred,
             Issuer = _configuration["Token:Issuer"],
-
         };
+
         var tokenhandler = new JwtSecurityTokenHandler();
         var token = tokenhandler.CreateToken(TokenDesc);
         return Task.FromResult(tokenhandler.WriteToken(token));
