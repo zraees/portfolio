@@ -47,9 +47,10 @@ public class AccountController : BaseApiController
     }
 
     [HttpGet("GetUsers")]
-    public async Task<List<ApplicationUser>> GetUsers()
+    public async Task<IActionResult> GetUsers()
     {
-        return await _sender.Send(new GetUsersQuery()).ConfigureAwait(false);
+        var lst  = await _sender.Send(new GetUsersQuery()).ConfigureAwait(false);
+        return Ok(lst);
     }
 
     // refresh token
