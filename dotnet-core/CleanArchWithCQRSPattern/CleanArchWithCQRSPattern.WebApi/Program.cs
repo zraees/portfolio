@@ -1,5 +1,6 @@
 using System.Text;
 using CleanArchWithCQRSPattern.Infrastructure;
+using CleanArchWithCQRSPattern.WebApi.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -68,6 +69,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseAutomaticMigration<BlogDbContext>();
 
 app.UseHttpsRedirection();
 

@@ -5,15 +5,18 @@ using CleanArchWithCQRSPattern.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-public class BlogConfiguration : IEntityTypeConfiguration<Blog>
+public class AuditLogConfiguration : IEntityTypeConfiguration<AuditLog>
 {
-    public void Configure(EntityTypeBuilder<Blog> builder)
+    public void Configure(EntityTypeBuilder<AuditLog> builder)
     {
         builder.HasKey(x => x.Id);
-        builder.Property(x => x.Name)
+        builder.Property(x => x.Email)
             .IsRequired()
             .HasMaxLength(250);
-        builder.Property(x => x.Author)
+        builder.Property(x => x.EntityName)
+            .IsRequired()
+            .HasMaxLength(250);
+        builder.Property(x => x.Action)
             .IsRequired()
             .HasMaxLength(250);
     }
