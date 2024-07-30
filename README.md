@@ -18,8 +18,6 @@ The key features of this project include:
 - Integration with Entity Framework Core for data access
 - SQLite as the underlying database
 
-This project showcases the benefits of using the Clean Architecture and CQRS patterns, such as improved testability, scalability, and flexibility in the codebase.
-
 ## Project 2: Onion Architecture Implementation
 
 This project showcases the implementation of the Onion Architecture pattern, a popular design approach that promotes separation of concerns and enhances the maintainability of the codebase.
