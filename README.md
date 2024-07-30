@@ -1,11 +1,11 @@
-# My Portfolio
+# My Skill Showcase
 
 ## Project 1: Clean Architecture with CQRS Design Pattern Implementation using Mediator
 
 **Technologies Used:**
 - ASP.NET Core Web API 8.0
-- CQRS Pattern
-- Mediator Pattern
+- CQRS Pattern with Mediator Pattern
+- Many other design patterns such as Repository Pattern and Result Pattern
 - Entity Framework Core
 - SQLite
 
