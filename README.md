@@ -32,7 +32,7 @@ The key highlights of this project include:
 By following the Onion Architecture pattern, this project demonstrates the benefits of improved testability, flexibility, and scalability, making it a valuable reference for developers looking to implement a well-structured and maintainable application.
 
 ## Project 3: Angular 15 Front-end with Clean Architecture Backend
-[
+<!--
 **Technologies Used:**
 - Angular 15
 - ASP.NET Core Web API 8.0 (Clean Architecture)
@@ -51,7 +51,7 @@ The key features of this project include:
 - Integration with the Clean Architecture Web API backend
 
 This project showcases the integration of a modern front-end framework (Angular 15) with a well-structured backend, following the principles of Clean Architecture and CQRS.
-]
+-->
 ## Project 4: ASP.NET Identity Implementation
 
 **Technologies Used:**
