@@ -33,7 +33,7 @@ By following the Onion Architecture pattern, this project demonstrates the benef
 
 ## Project 3: Angular Projects (Versions 15 & 18)
 
-### Project 1: Players Dashboard
+### Project 3.1: Players Dashboard
 
 An Angular 18 application that displays a players dashboard. It retrieves player details from a JSON data source and uses Angular Signals to efficiently manage and reflect changes in the data, without relying on Zone.js.
 
@@ -50,7 +50,7 @@ An Angular 18 application that displays a players dashboard. It retrieves player
 - HTML/CSS
 - JSON data format
 
-### Project 2: API Consumption
+### Project 3.2: API Consumption
 
 An Angular 18 application that consumes an API developed using .NET Core. It fetches data from the API and presents it in a responsive and interactive user interface, demonstrating the ability to integrate with external data sources.
 
