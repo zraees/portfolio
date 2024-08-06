@@ -23,7 +23,7 @@ export class MessageService {
     });
 
     this.http
-      .get<Message[]>('/assets/mocks/messages.json')
+      .get<Message[]>('./assets/mocks/messages.json')
       .pipe(takeUntilDestroyed())
       .subscribe({
         next: items => this.unread.set(items)
