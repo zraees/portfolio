@@ -13,7 +13,7 @@ export class ApiService {
   ) { }
 
   public getAllPlayers$() {
-    return this.http.get<Player[]>('/assets/mocks/players.json').pipe(delay(1000));
+    return this.http.get<Player[]>('./assets/mocks/players.json').pipe(delay(1000));
   }
 
   public getPlayerById$(id: string) {
