@@ -14,15 +14,14 @@ export const routes: Routes = [
         title: 'Gem Finder | All Players',
         data: { preload: true }
     },
-    // {
-    //     path: 'leaderboards',
-    //     loadChildren: () => import('./pages/leaderboards/leaderboards.module').then(m => m.LeaderboardsModule),
-    //     title: 'Gem Finder | Leaderboards'
-    // },
+    {
+         path: 'leaderboards',
+         loadComponent: () => import('./pages/leaderboards/leaderboards.component').then(m => m.LeaderboardsComponent),
+         title: 'Gem Finder | Leaderboards'
+    },
     {
          path: 'messages',
-         component: MessagesComponent,
-         //loadComponent: () => import('./pages/messages/messages.component').then(m => m.MessagesComponent),
+         loadComponent: () => import('./pages/messages/messages.component').then(m => m.MessagesComponent),
          data: { preload: true }
     },
     {
