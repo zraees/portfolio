@@ -1,3 +1,3 @@
 export const environment = {
-    appFooter: '© Gem Finder, LLC ~ Development Build'
+    appFooter: '© Alpha Innovative ~ Development Build'
 };
