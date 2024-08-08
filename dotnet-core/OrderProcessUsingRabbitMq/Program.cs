@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using OrderProcessUsingRabbitMq.Data;
+using OrderProcessUsingRabbitMq.RabbitMQ;
 using OrderProcessUsingRabbitMq.RabbitMQ.Connection;
 using OrderProcessUsingRabbitMq.Service;
 
@@ -12,6 +13,7 @@ builder.Services.AddDbContext<OrderDBContext>(ctx =>
 });
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddSingleton<IRabbitMqConnection>(new RabbitMqConnection());
+builder.Services.AddScoped<IMessageProducer, RabbitMqProducer>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
