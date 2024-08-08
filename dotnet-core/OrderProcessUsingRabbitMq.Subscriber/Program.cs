@@ -10,7 +10,7 @@ var factory = new ConnectionFactory
 var connection = factory.CreateConnection();
 
 var channel = connection.CreateModel();
-channel.QueueDeclare("orders", exclusive: false);
+channel.QueueDeclare("orders", durable: default, exclusive: false, autoDelete: default, default);
 
 var consumer = new EventingBasicConsumer(channel);
 
@@ -21,5 +21,7 @@ consumer.Received += (sender, args) =>
 
     Console.WriteLine($"Message received: {message}");
 };
+
+channel.BasicConsume(queue: "orders", autoAck: true, consumer: consumer);
 
 Console.ReadKey();

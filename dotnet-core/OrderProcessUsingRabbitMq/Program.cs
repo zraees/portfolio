@@ -34,3 +34,9 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+/*
+ * docker command
+ * 1- docker login --username your_username_here
+ * 2- docker run -d --hostname my-rabbitmq-server --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+ */
