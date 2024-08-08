@@ -1,9 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using OrderProcessUsingRabbitMq.Data;
+using OrderProcessUsingRabbitMq.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddDbContext<OrderDBContext>(ctx =>
 {
     ctx.UseInMemoryDatabase("OrderProcessDB");
