@@ -1,7 +1,7 @@
-﻿using OrderProcessUsingRabbitMq.Data;
-using OrderProcessUsingRabbitMq.Dtos;
+﻿using Publisher.Data;
+using Publisher.Dtos;
 
-namespace OrderProcessUsingRabbitMq.Service;
+namespace Publisher.Service;
 
 public interface IOrderService
 {

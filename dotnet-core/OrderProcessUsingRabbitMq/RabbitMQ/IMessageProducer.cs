@@ -1,4 +1,4 @@
-﻿namespace OrderProcessUsingRabbitMq.RabbitMQ;
+﻿namespace Publisher.RabbitMQ;
 
 public interface IMessageProducer
 {

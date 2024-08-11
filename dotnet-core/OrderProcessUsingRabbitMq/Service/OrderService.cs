@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OrderProcessUsingRabbitMq.Data;
-using OrderProcessUsingRabbitMq.Dtos;
-using OrderProcessUsingRabbitMq.RabbitMQ;
+using Publisher.Data;
+using Publisher.Dtos;
+using Publisher.RabbitMQ;
 
-namespace OrderProcessUsingRabbitMq.Service;
+namespace Publisher.Service;
 
 public class OrderService : IOrderService
 {

@@ -1,8 +1,8 @@
-﻿using OrderProcessUsingRabbitMq.RabbitMQ.Connection;
+﻿using Publisher.RabbitMQ.Connection;
 using System.Text;
 using System.Text.Json;
 
-namespace OrderProcessUsingRabbitMq.RabbitMQ;
+namespace Publisher.RabbitMQ;
 
 public class RabbitMqProducer : IMessageProducer
 {

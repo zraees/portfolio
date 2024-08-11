@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace OrderProcessUsingRabbitMq.Data;
+namespace Publisher.Data;
 
 public class OrderDBContext : DbContext
 {

@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using OrderProcessUsingRabbitMq.Data;
-using OrderProcessUsingRabbitMq.Dtos;
-using OrderProcessUsingRabbitMq.Service;
+using Publisher.Data;
+using Publisher.Dtos;
+using Publisher.Service;
 
-namespace OrderProcessUsingRabbitMq.Controllers
+namespace Publisher.Controllers
 {
     [ApiController]
     [Route("[controller]")]

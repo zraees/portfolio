@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace OrderProcessUsingRabbitMq.Data;
+namespace Publisher.Data;
 
 public class Order
 {

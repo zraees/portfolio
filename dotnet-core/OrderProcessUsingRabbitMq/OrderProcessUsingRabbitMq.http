@@ -1,6 +1,6 @@
-@OrderProcessUsingRabbitMq_HostAddress = http://localhost:5166
+@Publisher_HostAddress = http://localhost:5166
 
-GET {{OrderProcessUsingRabbitMq_HostAddress}}/weatherforecast/
+GET {{Publisher_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###

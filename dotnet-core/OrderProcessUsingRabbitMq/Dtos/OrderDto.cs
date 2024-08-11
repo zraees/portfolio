@@ -1,4 +1,4 @@
-﻿namespace OrderProcessUsingRabbitMq.Dtos;
+﻿namespace Publisher.Dtos;
 
 public class OrderDto
 {

@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using OrderProcessUsingRabbitMq.Data;
-using OrderProcessUsingRabbitMq.RabbitMQ;
-using OrderProcessUsingRabbitMq.RabbitMQ.Connection;
-using OrderProcessUsingRabbitMq.Service;
+using Publisher.Data;
+using Publisher.RabbitMQ;
+using Publisher.RabbitMQ.Connection;
+using Publisher.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 

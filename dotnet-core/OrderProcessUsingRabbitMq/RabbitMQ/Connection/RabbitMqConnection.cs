@@ -1,6 +1,6 @@
 ﻿using RabbitMQ.Client;
 
-namespace OrderProcessUsingRabbitMq.RabbitMQ.Connection;
+namespace Publisher.RabbitMQ.Connection;
 
 public class RabbitMqConnection : IRabbitMqConnection, IDisposable
 {
