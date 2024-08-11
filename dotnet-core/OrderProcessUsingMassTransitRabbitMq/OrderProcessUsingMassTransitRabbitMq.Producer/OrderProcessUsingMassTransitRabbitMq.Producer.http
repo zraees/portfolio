@@ -1,0 +1,6 @@
+@OrderProcessUsingMassTransitRabbitMq.Producer_HostAddress = http://localhost:5014
+
+GET {{OrderProcessUsingMassTransitRabbitMq.Producer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
