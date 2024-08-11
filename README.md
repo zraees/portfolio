@@ -1,6 +1,6 @@
 # My Skill Showcase
 
-## Project 1: .Net Core Projects
+## Section 1: .Net Core Projects
 
 ### Project 1.1: Clean Architecture with CQRS Design Pattern Implementation using Mediator
 
@@ -24,7 +24,13 @@ The key features of this project include:
 
 This project creates a simple web API endpoint to create an order, which publishes a message to a RabbitMQ queue. The console application consumes the messages from the queue and processes the orders.
 
-## Project 2: Onion Architecture Implementation
+### Project 1.3: OrderProcessUsingMassTransitRabbitMq
+
+This project creates a simple web API endpoint to create an order, which publishes a message using a MassTransit RabbitMQ queue. The console application consumes the messages from the queue and processes the orders.
+
+## Section 2: .Net Frameword Projects
+
+### Project 2.1: Onion Architecture Implementation
 
 This project showcases the implementation of the Onion Architecture pattern, a popular design approach that promotes separation of concerns and enhances the maintainability of the codebase.
 
@@ -37,7 +43,8 @@ The key highlights of this project include:
 
 By following the Onion Architecture pattern, this project demonstrates the benefits of improved testability, flexibility, and scalability, making it a valuable reference for developers looking to implement a well-structured and maintainable application.
 
-s
+## Project 3: Angular Projects (Versions 15 & 18)
+
 ### Project 3.1: Players Dashboard
 
 An Angular 18 application that displays a players dashboard. It retrieves player details from a JSON data source and uses Angular Signals to efficiently manage and reflect changes in the data, without relying on Zone.js.
