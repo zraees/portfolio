@@ -8,6 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.2.4" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\OrderProcessUsingMassTransitRabbitMq.SharedModels\OrderProcessUsingMassTransitRabbitMq.SharedModels.csproj" />
   </ItemGroup>
 

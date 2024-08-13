@@ -22,8 +22,4 @@
     <ProjectReference Include="..\OrderProcessUsingMassTransitRabbitMq.SharedModels\OrderProcessUsingMassTransitRabbitMq.SharedModels.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
