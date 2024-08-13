@@ -1,16 +1,20 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MassTransit;
+using Microsoft.EntityFrameworkCore;
 using OrderProcessUsingMassTransitRabbitMq.Producer.Data;
 using OrderProcessUsingMassTransitRabbitMq.Producer.Dtos;
+using OrderProcessUsingMassTransitRabbitMq.SharedModels;
 
 namespace OrderProcessUsingMassTransitRabbitMq.Producer.Service;
 
 public class OrderService : IOrderService
 {
     private readonly OrderDBContext _orderDBContext;
+    private readonly IPublishEndpoint _publishEndpoint;
 
-    public OrderService(OrderDBContext orderDBContext)
+    public OrderService(OrderDBContext orderDBContext, IPublishEndpoint publishEndpoint)
     {
         this._orderDBContext = orderDBContext;
+        this._publishEndpoint = publishEndpoint;
     }
 
     public async Task<List<Order>> GetAll()
@@ -25,6 +29,13 @@ public class OrderService : IOrderService
         if (order is not null)
         {
             // massTransit
+            await _publishEndpoint.Publish<IOrderCreated>(new
+            {
+                order.Id,
+                order.ProductName,
+                order.Price,
+                order.Quantity,
+            });
         }
 
         return order!;
