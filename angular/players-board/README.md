@@ -1,6 +1,6 @@
 # PlayersBoard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
+An Angular 18 application that displays a players dashboard. It retrieves player details from a JSON data source and uses Angular Signals to efficiently manage and reflect changes in the data, without relying on Zone.js.
 
 ## Development server
 

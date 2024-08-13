@@ -1,6 +1,4 @@
-# .Net Frameword Projects
-
-## Project 2.1: Onion Architecture Implementation
+# Project 2: Onion Architecture Implementation
 
 This project showcases the implementation of the Onion Architecture pattern, a popular design approach that promotes separation of concerns and enhances the maintainability of the codebase.
 

@@ -1,4 +1,4 @@
-# Section 1: .Net Core Projects
+# .Net Core Projects
 
 ## Project 1.1: Clean Architecture with CQRS Design Pattern Implementation using Mediator
 
