@@ -28,6 +28,26 @@ This project creates a simple web API endpoint to create an order, which publish
 
 This project creates a simple web API endpoint to create an order, which publishes a message using a MassTransit RabbitMQ queue. The console application consumes the messages from the queue and processes the orders.
 
+### Project 1.4: ASP.NET Identity Implementation
+
+**Technologies Used:**
+- ASP.NET Core Web API 8.0
+- ASP.NET Identity
+- JSON Web Tokens (JWT)
+- Entity Framework Core
+- SQLite
+
+This project demonstrates the implementation of user authentication and authorization using the ASP.NET Identity framework. It includes features such as user registration, login, and role-based access control.
+
+The key features of this project include:
+
+- Integration with ASP.NET Identity for user management
+- Use of JSON Web Tokens (JWT) for secure authentication
+- Entity Framework Core for data access
+- SQLite as the underlying database
+
+This project showcases the integration of ASP.NET Identity with a Web API application, providing a secure and scalable authentication and authorization mechanism.
+
 ## Section 2: .Net Frameword Projects
 
 ### Project 2.1: Onion Architecture Implementation
@@ -99,22 +119,3 @@ The key features of this project include:
 
 This project showcases the integration of a modern front-end framework (Angular 15) with a well-structured backend, following the principles of Clean Architecture and CQRS.
 -->
-## Project 4: ASP.NET Identity Implementation
-
-**Technologies Used:**
-- ASP.NET Core Web API 8.0
-- ASP.NET Identity
-- JSON Web Tokens (JWT)
-- Entity Framework Core
-- SQLite
-
-This project demonstrates the implementation of user authentication and authorization using the ASP.NET Identity framework. It includes features such as user registration, login, and role-based access control.
-
-The key features of this project include:
-
-- Integration with ASP.NET Identity for user management
-- Use of JSON Web Tokens (JWT) for secure authentication
-- Entity Framework Core for data access
-- SQLite as the underlying database
-
-This project showcases the integration of ASP.NET Identity with a Web API application, providing a secure and scalable authentication and authorization mechanism.
