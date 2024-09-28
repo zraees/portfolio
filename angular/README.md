@@ -1,4 +1,4 @@
-# Project 3: Angular Projects (Versions 15 & 18)
+# Angular Projects (Versions 15 & 18)
 
 ## Project 3.1: Players Dashboard
 
